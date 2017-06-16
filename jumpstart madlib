@@ -4,7 +4,7 @@
 # what we're doing and invite them to play.
 
 puts "This is Emily's Hello-World Madlib " +
-			"generator! Welcome aboard!"
+	"generator! Welcome aboard!"
 puts "What's your name?"
 name = gets.chomp
 puts	"Would you like to play, " + 
@@ -62,22 +62,22 @@ puts name.capitalize + "'s Long Day"
 puts " "
 puts "It’s been an " + adj1 + " day."
 puts "Here at " + place1 + " I had some " +
-			"trouble with a " + adj2 + " " + 
-			noun1 + ", which kept me pretty " +
-			adj3 + " for most of the morning. " +
-			"I was almost " + adj4 + 
-			" after dealing with that, but then " +
-			person1 + " showed up and started " + 
-			verb1 + " my " + noun2 + 
-			" even after I told them not to! " + 
-			"How rude! After that, my " +
-			noun3 + " broke, and I had to make a " +
-			adj5.upcase + " run to " + place2 + 
-			" so I could buy a " + noun4 +
-			" to fix it. That cost about " + 
-			number1 + " more dollars than I thought" + 
-			" it would. Finally, I’m settled back " +
-			"in at " + place1 + ", kicking up my feet" +
-			" and relaxing with a nice glass of " +
-			liquid1 + " and " + music1 + 
-			" on the radio. Much better!"
+	"trouble with a " + adj2 + " " + 
+	noun1 + ", which kept me pretty " +
+	adj3 + " for most of the morning. " +
+	"I was almost " + adj4 + 
+	" after dealing with that, but then " +
+	person1 + " showed up and started " + 
+	verb1 + " my " + noun2 + 
+	" even after I told them not to! " + 
+	"How rude! After that, my " +
+	noun3 + " broke, and I had to make a " +
+	adj5.upcase + " run to " + place2 + 
+	" so I could buy a " + noun4 +
+	" to fix it. That cost about " + 
+	number1 + " more dollars than I thought" + 
+	" it would. Finally, I’m settled back " +
+	"in at " + place1 + ", kicking up my feet" +
+	" and relaxing with a nice glass of " +
+	liquid1 + " and " + music1 + 
+	" on the radio. Much better!"
