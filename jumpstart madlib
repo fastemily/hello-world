@@ -1,0 +1,83 @@
+# We're writing an interactive madlib.
+
+# First, we have to explain to the user
+# what we're doing and invite them to play.
+
+puts "This is Emily's Hello-World Madlib " +
+			"generator! Welcome aboard!"
+puts "What's your name?"
+name = gets.chomp
+puts	"Would you like to play, " + 
+			name.capitalize + "?"
+answer = gets.chomp
+puts "Alright! Let's get started!"
+
+# Now we'll collect the information for
+# completing the madlib.
+
+puts "Could you give me an adjective?"
+adj1 = gets.chomp
+puts "Thanks! Can you name a place?"
+place1 = gets.chomp
+puts "Great! How about another adjective?"
+adj2 = gets.chomp
+puts "Rad. A noun, please?"
+noun1 = gets.chomp
+puts "You're on a roll! Another adjective?"
+adj3 = gets.chomp
+puts "Whoops, one more!"
+adj4 = gets.chomp
+puts "Can you name a person?"
+person1 = gets.chomp
+puts "Let's mix things up with a verb now."
+verb1 = gets.chomp
+puts "We're almost done! Gimme a noun!"
+noun2 = gets.chomp
+puts "And one more!"
+noun3 = gets.chomp
+puts "Another adjective, if you don't mind."
+adj5 = gets.chomp
+puts "And another place!"
+place2 = gets.chomp
+puts "Final noun!"
+noun4 = gets.chomp
+puts "And how about a number?"
+number1 = gets.chomp
+puts "Name a liquid."
+liquid1 = gets.chomp
+puts "And name some music to wrap this up!"
+music1 = gets.chomp
+
+# Whew. That took forever. But now we can
+# set up the actual madlib body using the
+# responses gleaned from the user.
+
+puts "Thanks, " + name.capitalize + "!" +
+			" You've been great!"
+puts "Are you ready for this?"
+answer = gets.chomp
+puts " Alright: here we go!"
+puts " "
+puts name.capitalize + "'s Long Day"
+puts " "
+puts "It’s been an " + adj1 + " day."
+puts "Here at " + place1 + " I had some " +
+			"trouble with a " + adj2 + " " + 
+			noun1 + ", which kept me pretty " +
+			adj3 + " for most of the morning. " +
+			"I was almost " + adj4 + 
+			" after dealing with that, but then " +
+			person1 + " showed up and started " + 
+			verb1 + " my " + noun2 + 
+			" even after I told them not to! " + 
+			"How rude! After that, my " +
+			noun3 + " broke, and I had to make a " +
+			adj5.upcase + " run to " + place2 + 
+			" so I could buy a " + noun4 +
+			" to fix it. That cost about " + 
+			number1 + " more dollars than I thought" + 
+			" it would. Finally, I’m settled back " +
+			"in at " + place1 + ", kicking up my feet" +
+			" and relaxing with a nice glass of " +
+			liquid1 + " and " + music1 + 
+			" on the radio. Much better!"
