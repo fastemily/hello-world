@@ -1,47 +1,148 @@
-# collect information about user
-# utilize information in conversation
+# Goal:
+# Collect info about the user and utilize it in conversation.
 
+# An introduction:
 puts "Hello. " 
 puts "My name is Computer. "
-puts "That's right. Just sound it out " +
-     "slowwwly." 
+puts "That's right. Just sound it out slowwwly." 
+
+#Included some pauses throughout for ease of reading the output.
+gets.chomp
+
 puts "'Kum - pew - tur'. "
+gets.chomp
+
 puts "Mmn."
+gets.chomp
+
 puts "Yes." 
+gets.chomp
+
 puts "Magnifico!"
-puts "...Nice accent! " +
-     "Now, what is your name? "
+
+#Here, we ask for the user's name.
+puts "...Nice accent! Now, what is your name? "
 name = gets.chomp
 
-# Let's make sure that name gets
-# capitalized when we use it, even if the
-# user forgot to do it themselves
+#If the response is a blank, we politely ask again.
+if name.downcase == ""
+	puts "What was that? Sorry. Speak up would you?"
+	puts "I'm a little hard of hearing."
+	name = gets.chomp
+end
 
-puts "It's so wonderful to meet you, " +
-     name.capitalize + "! "
-puts "I've been waiting ALL DAY " +
-     "for someone to come by and " +
-     "say hello!" 
-puts "(That's a lovely shirt you're wearing " +
-     "by the way.)"
-     
-puts "Anyway! Enough about me! "
-puts "Let's talk about you!"
+#Repeat!
+
+if name.downcase == ""
+	puts "Oh, humor me."
+ name = gets.chomp
+end
+
+#This loop prevents the user from continuing onward until they 
+#provide a response that is not a blank line.
+until name != ""
+ puts "Eh?"
+ name = gets.chomp
+end
+
+#After the user inputs a response that is not a blank line,
+#the conversation continues.
+puts "It's so wonderful to meet you, " + name.capitalize + "! "
+puts "I've been waiting ALL DAY for someone to come say hello!"
+gets.chomp
+puts "(That's a lovely shirt you're wearing by the way.)"
+puts "Anyway! Enough about me! Let's talk about you!"
+gets.chomp
 puts "I -really- like music. "
 puts "I LOVE They Might be Giants."
-puts "Have you heard of them?"
-giants = gets.chomp
 
+#Gathering information. Have they heard of this band?
+puts "Have you heard of them?"
+answer = gets.strip
+
+#The 'eh?' loop is repeated to discourage blank line responses.
+until answer != ""
+	puts "Eh?"
+	answer = gets.strip
+end
+
+#These lines allow for yes-type answers to count as a yes,
+#and then receive an appropriate response.
+if answer.downcase == "yes"
+	puts "Oh, I'm so glad. Aren't they great?"
+elsif answer.downcase == "yeah"
+	puts "Oh, I'm so glad. Aren't they great?"
+elsif answer.downcase == "sure"
+  puts "Oh, I'm so glad. Aren't they great?"
+elsif  answer.downcase == "yea"
+  puts "Oh, I'm so glad. Aren't they great?"
+elsif answer.downcase == "ya"
+  puts "Oh, I'm so glad. Aren't they great?"
+elsif answer.downcase == "yep"
+  puts "Oh, I'm so glad. Aren't they great?"
+elsif answer.downcase == "you bet"
+  puts "Oh, I'm so glad. Aren't they great?"
+elsif answer.downcase == "yes."
+  puts "Oh, I'm so glad. Aren't they great?"
+  
+#If we don't receive one of the defined yes-type answers,
+#ruby offers a weblink to one of their music videos.
+#I want to figure out how to make this a hyperlink.
+else
+  puts "That's too bad! You're really missing out!"
+	puts ""
+  puts "Here is a sample of their stuff in case you want to "
+  puts "listen later!"
+  puts "https://www.youtube.com/watch?v=jAMRTGv82Zo"
+end
+
+#Asking for more info.
+gets.chomp
 puts "Who is YOUR favorite musician?" 
     musician = gets.chomp
 
-puts "Ah. I also enjoy " + musician.capitalize + "." 
+#Looping until user gives more than a blank line.
+until musician != ""
+	puts "Eh?"
+	musician = gets.strip
+end
 
+#Repeat input with comment.
+#I'd like to properly capitalize the output later. 
+#I think this will take turning the input into an array and
+#toying with individual words.
+
+puts "Ah. I also enjoy " + musician + "." 
+
+#Asking for more info.
 puts "Is there a band you -dislike-?"
 dislike = gets.chomp
 
-puts "Yes! " + dislike.capitalize + "!" +
-    " They're terrible!"
-puts "You have excellent taste in music, " +
-     name.capitalize + "."
+#Looping until user gives more than a blank line.
+until dislike != ""
+	puts "Eh?"
+	dislike = gets.strip
+end
 
+#Varied responses for varied input. 
+if dislike.downcase == "no"
+	puts "Wow! You must really like music!"
+elsif dislike.downcase == "no."
+	puts "Wow! You must really like music!"
+elsif dislike.downcase == "nope"
+	puts "Wow! You must really like music!"
+elsif dislike.downcase == "yes"
+	puts "Who?"
+	dislike = gets.chomp
+	puts "Yes! " + dislike + "!" + " They're terrible!"
+	puts "You have excellent taste in music, " +
+  name.capitalize + "."
+else
+	puts "Yes! " + dislike + "!" + " They're terrible!"
+	puts "You have excellent taste in music, " +
+  name.capitalize + "."
+end
+
+puts "Anyway, I have to go now!"
+puts "Come back and chat again later!"
+gets.chomp
