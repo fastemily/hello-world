@@ -1,0 +1,20 @@
+#gathering value for variable x
+puts "How many hats do you have?"
+x = gets.chomp
+#print variable x
+puts "#{x} = x" 
+
+#gathering value for variable y
+puts "How many coats do you have?"
+y = gets.chomp
+#print variable y
+puts "#{y} = y"
+
+#begin flowchart
+if x == y 
+	puts "#{x} is equal to #{y}."
+elsif x <= y
+ puts "#{x} is less than #{y}."
+elsif x >= y
+	puts "#{x} is greater than #{y}."
+end
